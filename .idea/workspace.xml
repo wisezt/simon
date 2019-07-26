@@ -93,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564178067071</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add fadeOut and fadeIn abilities to the button">
+      <created>1564179996531</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1564179996531</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -131,7 +138,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Add gamePattern, nextSequence, buttonColours, randomChosenColour" />
     <MESSAGE value="Add hide function to all the buttons." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add hide function to all the buttons." />
+    <MESSAGE value="Add fadeOut and fadeIn abilities to the button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add fadeOut and fadeIn abilities to the button" />
   </component>
   <component name="masterDetails">
     <states>

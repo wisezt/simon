@@ -45,22 +45,32 @@ $(document).ready(
     // $("#blue").on("click", chooseButton("blue"));
 
 
+    var greenAudio = new Audio("sounds/green.mp3");
+    var redAudio = new Audio("sounds/red.mp3");
+    var blueAudio = new Audio("sounds/blue.mp3");
+    var yellowAudio = new Audio("sounds/yellow.mp3");
+
+
     var chooseButton = function(buttonColour) {
       switch (buttonColour) {
         case "green":
           $("#green").fadeOut(100).fadeIn(100);
+          greenAudio.play();
           break;
 
         case "red":
           $("#red").fadeOut(100).fadeIn(100);
+              redAudio.play();
           break;
 
         case "yellow":
           $("#yellow").fadeOut(100).fadeIn(100);
+              yellowAudio.play();
           break;
 
         case "blue":
           $("#blue").fadeOut(100).fadeIn(100);
+              blueAudio.play();
           break;
 
         default:
