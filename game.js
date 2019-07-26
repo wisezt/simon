@@ -56,21 +56,25 @@ $(document).ready(
         case "green":
           $("#green").fadeOut(100).fadeIn(100);
           greenAudio.play();
+          handdler("green");
           break;
 
         case "red":
           $("#red").fadeOut(100).fadeIn(100);
-              redAudio.play();
+          redAudio.play();
+          handdler("red");
           break;
 
         case "yellow":
           $("#yellow").fadeOut(100).fadeIn(100);
-              yellowAudio.play();
+          yellowAudio.play();
+          handdler("yellow");
           break;
 
         case "blue":
           $("#blue").fadeOut(100).fadeIn(100);
-              blueAudio.play();
+          blueAudio.play();
+          handdler("blue");
           break;
 
         default:
@@ -80,11 +84,13 @@ $(document).ready(
     }
 
 
+var userChosenPattern = [];
+function handdler(userChosenColour){
 
+  userChosenPattern.push(userChosenColour);
+console.log(userChosenPattern);
 
-
-
-
+}
 
 
 

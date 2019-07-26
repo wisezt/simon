@@ -100,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564179996531</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add different sounds to the buttons">
+      <created>1564180775547</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1564180775547</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -139,7 +146,8 @@
     <MESSAGE value="Add gamePattern, nextSequence, buttonColours, randomChosenColour" />
     <MESSAGE value="Add hide function to all the buttons." />
     <MESSAGE value="Add fadeOut and fadeIn abilities to the button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add fadeOut and fadeIn abilities to the button" />
+    <MESSAGE value="Add different sounds to the buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add different sounds to the buttons" />
   </component>
   <component name="masterDetails">
     <states>
