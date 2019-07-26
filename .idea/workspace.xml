@@ -107,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564180775547</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add a function which recording the color which is input by user">
+      <created>1564181295048</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1564181295048</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -147,7 +154,8 @@
     <MESSAGE value="Add hide function to all the buttons." />
     <MESSAGE value="Add fadeOut and fadeIn abilities to the button" />
     <MESSAGE value="Add different sounds to the buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add different sounds to the buttons" />
+    <MESSAGE value="Add a function which recording the color which is input by user" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a function which recording the color which is input by user" />
   </component>
   <component name="masterDetails">
     <states>

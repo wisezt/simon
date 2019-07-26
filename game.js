@@ -84,15 +84,26 @@ $(document).ready(
     }
 
 
-var userChosenPattern = [];
-function handdler(userChosenColour){
+    var userChosenPattern = [];
 
-  userChosenPattern.push(userChosenColour);
-console.log(userChosenPattern);
+    function handdler(userChosenColour) {
 
-}
+      userChosenPattern.push(userChosenColour);
+      console.log(userChosenPattern);
 
+    }
 
+    var theLevel = 0;
+    // $(document).keypress(function(event){
+    //   $("h1").text("Level " + theLevel);
+    //   console.log(event.key);
+    // });
+
+    $(document).on("keypress", function(event) {
+        $("h1").text("Level " + theLevel);
+        console.log(event.key);
+      }
+    );
 
 
 
