@@ -5,17 +5,22 @@ $(document).ready(
 
 
     var gamePattern = [];
+    var theLevel = 1;
+    var randomChosenColour;
+    var gameStarted = false;
 
     function nextSequence() {
       var randomNumber = Math.floor(Math.random() * 4);
-      return randomNumber;
+      randomChosenColour = buttonColours[randomNumber];
+      gamePattern.push(randomChosenColour);
+
+      console.log("gamePattern: " + gamePattern);
+
+
     }
 
     var buttonColours = ["red", "blue", "green", "yellow"];
 
-    var randomChosenColour = buttonColours[nextSequence()];
-
-    gamePattern.push(randomChosenColour);
 
 
     $("#green").on("click",
@@ -49,14 +54,17 @@ $(document).ready(
     var redAudio = new Audio("sounds/red.mp3");
     var blueAudio = new Audio("sounds/blue.mp3");
     var yellowAudio = new Audio("sounds/yellow.mp3");
+        var wrongAudio = new Audio("sounds/wrong.mp3");
 
 
     var chooseButton = function(buttonColour) {
+      console.log("User input: " + buttonColour);
       switch (buttonColour) {
         case "green":
           $("#green").fadeOut(100).fadeIn(100);
           greenAudio.play();
           handdler("green");
+
           break;
 
         case "red":
@@ -80,7 +88,15 @@ $(document).ready(
         default:
 
       }
+      checkGameStatus();
+    }
 
+
+
+    function checkGameStatus(){
+        if ( gameStarted != true){
+          restartGame();
+        }
     }
 
 
@@ -89,22 +105,67 @@ $(document).ready(
     function handdler(userChosenColour) {
 
       userChosenPattern.push(userChosenColour);
-      console.log(userChosenPattern);
+      console.log("userChosenPattern: " + userChosenPattern);
+      console.log("gamePattern: " + gamePattern);
+      console.log("gameStarted: " + gameStarted);
+      if (gameStarted == true) {
+        console.log("userChosenPattern.length: " + userChosenPattern.length);
+        console.log("gamePattern.length: " + gamePattern.length);
+
+
+          for (var i = 0; i < userChosenPattern.length; i++) {
+            if (userChosenPattern[i] != gamePattern[i]) {
+              restartGame()
+            }
+          }
+
+          if (userChosenPattern.length == gamePattern.length) {
+            nextSequence();
+            theLevel++;
+            $("h1").text("Level " + theLevel);
+            userChosenPattern = [];
+          }
+
+
+
+
+
+      }
+
+
+
 
     }
 
-    var theLevel = 0;
+
     // $(document).keypress(function(event){
     //   $("h1").text("Level " + theLevel);
     //   console.log(event.key);
     // });
 
     $(document).on("keypress", function(event) {
-        $("h1").text("Level " + theLevel);
-        console.log(event.key);
-      }
-    );
+      console.log(event.key);
+      gamePattern = [];
+      theLevel = 1;
+      userChosenPattern = [];
+      nextSequence();
+      $("h1").text("Level " + theLevel);
+      gameStarted = true;
 
+    });
+
+
+    function restartGame() {
+      gameStarted = false;
+      $("h1").text("Game Over, Press Any Key to Restart");
+      $("body").css("background-color", "red");
+      setTimeout(function() {
+      $("body").css("background-color", "#011F3F");
+    }, 500);
+    wrongAudio.play();
+
+
+    }
 
 
   }
