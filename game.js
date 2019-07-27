@@ -54,10 +54,17 @@ $(document).ready(
     var redAudio = new Audio("sounds/red.mp3");
     var blueAudio = new Audio("sounds/blue.mp3");
     var yellowAudio = new Audio("sounds/yellow.mp3");
-        var wrongAudio = new Audio("sounds/wrong.mp3");
+    var wrongAudio = new Audio("sounds/wrong.mp3");
 
 
     var chooseButton = function(buttonColour) {
+
+      $("#"+buttonColour).addClass("pressed");
+
+      setTimeout(function(){
+      $("#"+buttonColour).removeClass("pressed")}, 200);
+
+
       console.log("User input: " + buttonColour);
       switch (buttonColour) {
         case "green":
@@ -93,10 +100,10 @@ $(document).ready(
 
 
 
-    function checkGameStatus(){
-        if ( gameStarted != true){
-          restartGame();
-        }
+    function checkGameStatus() {
+      if (gameStarted != true) {
+        restartGame();
+      }
     }
 
 
@@ -113,18 +120,18 @@ $(document).ready(
         console.log("gamePattern.length: " + gamePattern.length);
 
 
-          for (var i = 0; i < userChosenPattern.length; i++) {
-            if (userChosenPattern[i] != gamePattern[i]) {
-              restartGame()
-            }
+        for (var i = 0; i < userChosenPattern.length; i++) {
+          if (userChosenPattern[i] != gamePattern[i]) {
+            restartGame()
           }
+        }
 
-          if (userChosenPattern.length == gamePattern.length) {
-            nextSequence();
-            theLevel++;
-            $("h1").text("Level " + theLevel);
-            userChosenPattern = [];
-          }
+        if (userChosenPattern.length == gamePattern.length) {
+          nextSequence();
+          theLevel++;
+          $("h1").text("Level " + theLevel);
+          userChosenPattern = [];
+        }
 
 
 
@@ -160,9 +167,9 @@ $(document).ready(
       $("h1").text("Game Over, Press Any Key to Restart");
       $("body").css("background-color", "red");
       setTimeout(function() {
-      $("body").css("background-color", "#011F3F");
-    }, 500);
-    wrongAudio.play();
+        $("body").css("background-color", "#011F3F");
+      }, 500);
+      wrongAudio.play();
 
 
     }
