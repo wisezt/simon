@@ -121,7 +121,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564182599207</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add wrong audio, and fixed logical error">
+      <created>1564195001163</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1564195001163</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add the function that the button will change into grey at pressing.">
+      <created>1564196560612</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1564196560612</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -163,7 +177,9 @@
     <MESSAGE value="Add different sounds to the buttons" />
     <MESSAGE value="Add a function which recording the color which is input by user" />
     <MESSAGE value="Add the keypress listener" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add the keypress listener" />
+    <MESSAGE value="Add wrong audio, and fixed logical error" />
+    <MESSAGE value="Add the function that the button will change into grey at pressing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add the function that the button will change into grey at pressing." />
   </component>
   <component name="masterDetails">
     <states>

@@ -17,6 +17,8 @@ $(document).ready(
       console.log("gamePattern: " + gamePattern);
 
 
+      $("#" + gamePattern[gamePattern.length-1]).fadeOut(200).fadeIn(200);
+
     }
 
     var buttonColours = ["red", "blue", "green", "yellow"];
@@ -68,26 +70,26 @@ $(document).ready(
       console.log("User input: " + buttonColour);
       switch (buttonColour) {
         case "green":
-          $("#green").fadeOut(100).fadeIn(100);
+
           greenAudio.play();
           handdler("green");
 
           break;
 
         case "red":
-          $("#red").fadeOut(100).fadeIn(100);
+
           redAudio.play();
           handdler("red");
           break;
 
         case "yellow":
-          $("#yellow").fadeOut(100).fadeIn(100);
+
           yellowAudio.play();
           handdler("yellow");
           break;
 
         case "blue":
-          $("#blue").fadeOut(100).fadeIn(100);
+
           blueAudio.play();
           handdler("blue");
           break;
